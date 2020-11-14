@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(sub,current,first,sublap1,sublap2)
 
         if(Math.abs(sub)<Math.abs(sublap1)&&Math.abs(sub)<Math.abs(sublap2)){
-            next_item(sub,300);
-        }else if(Math.abs(sublap1)<Math.abs(sublap2))next_item(sublap1,300)
-        else next_item(sublap2,300);
+            next_item(sub,0);
+        }else if(Math.abs(sublap1)<Math.abs(sublap2))next_item(sublap1,0)
+        else next_item(sublap2,0);
     }
 
     function change_color(){
