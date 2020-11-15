@@ -38,28 +38,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function change_color(){
         if(items[2].className.substr(items[2].className.length-1,items[2].className.length-1)=="A"){
-            A.setAttribute("style","background-color: blue")
+            A.setAttribute("style","background-color: #00a1e7")
             B.setAttribute("style","background-color: black;")
             C.setAttribute("style","background-color: black;")
             D.setAttribute("style","background-color: black;")
     }else {
         if(items[2].className.substr(items[2].className.length-1,items[2].className.length-1)=="B"){
             A.setAttribute("style","background-color: black;")
-            B.setAttribute("style","background-color: red")
+            B.setAttribute("style","background-color: #fe0000")
             C.setAttribute("style","background-color: black;")
             D.setAttribute("style","background-color: black;")
     }else {
         if(items[2].className.substr(items[2].className.length-1,items[2].className.length-1)=="C"){
             A.setAttribute("style","background-color: black")
             B.setAttribute("style","background-color: black")
-            C.setAttribute("style","background-color: yellow")
+            C.setAttribute("style","background-color: #fef100")
             D.setAttribute("style","background-color: black")
     }else {
         if(items[2].className.substr(items[2].className.length-1,items[2].className.length-1)=="D"){
             A.setAttribute("style","background-color: black")
             B.setAttribute("style","background-color: black")
             C.setAttribute("style","background-color: black")
-            D.setAttribute("style","background-color: pink")
+            D.setAttribute("style","background-color: #f834e9")
     }}}}
     }
     var A=document.getElementById("A");
@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var stream = document.querySelector('.gallery__stream');
     var items = document.querySelectorAll('.gallery__item');
+    var img = document.querySelectorAll(".bg")
     next_item(-2,0);
 
     var prev = document.querySelector('.gallery__prev');
@@ -80,6 +81,27 @@ document.addEventListener('DOMContentLoaded', function() {
     next.addEventListener('click', function() {
       next_item(1,50)
     });
+    
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("img01");
+    var captionH1 = document.getElementById("h1-caption");
+    var captionH2 = document.getElementById("h2-caption");
+    var hs = document.querySelectorAll(".hs")
+
+    for(var i=0;i<items.length;i++){
+        items[i].addEventListener('click', function() {
+            modal.style.display = "block";
+            modalImg.src = img[parseInt(this.id,10)-1].src;
+            captionH1.innerHTML = "Aluno: "+hs[0].textContent;
+            captionH2.innerHTML = "Fonte: "+hs[1].textContent;
+          });
+    }
+
+    var span = document.getElementsByClassName("close")[0];
+    
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
     
     var classA=document.getElementsByClassName("A");
     var classB=document.getElementsByClassName("B");

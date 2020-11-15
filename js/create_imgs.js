@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
             stream.appendChild(element);
 
             var div= document.getElementById(tem)
-            var element = document.createElement("div");
+            var element = document.createElement("img");
             element.setAttribute("class","bg")
-            element.setAttribute("style","background-image: url"+"(/img/"+turma+"/"+i+".jpg)");
+            element.setAttribute("src",""+"/img/"+turma+"/"+i+".jpg");
             var img = new Image();
-            img.src = '/img/'+turma+"/"+i+".jpeg";
+            img.src = '/img/'+turma+"/"+i+".jpg";
             
             console.log(img.height,img.width)
             div.appendChild(element);
@@ -25,9 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
             var div = document.getElementById(turma+tem);
             var h1 = document.createElement("h1");
+            h1.setAttribute("class","hs")
             var text = document.createTextNode("Eduardo");
             h1.appendChild(text);
             var h2 = document.createElement("h2");
+            h2.setAttribute("class","hs")
             var text = document.createTextNode("Autoria própria");
             h2.appendChild(text);
 
