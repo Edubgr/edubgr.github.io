@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var div = document.getElementById(turma+tem);
             var h1 = document.createElement("h1");
             h1.setAttribute("class","h1 hs")
-            var text = document.createTextNode("Gustavo");
+            var text = document.createTextNode("Eduardo");
             h1.appendChild(text);
             var h2 = document.createElement("h2");
             h2.setAttribute("class","h2 hs")

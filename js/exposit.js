@@ -22,13 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function turm (first, current){
-        
         var sub=first-parseInt(current,10);
         var sublap1=items.length+parseInt(current,10)-first;
+        
         if(parseInt(current,10)<first) sublap1=-sublap1
         var sublap2=-parseInt(current,10)+first+items.length;
-
-        console.log(sub,current,first,sublap1,sublap2)
 
         if(Math.abs(sub)<Math.abs(sublap1)&&Math.abs(sub)<Math.abs(sublap2)){
             next_item(sub,0);
