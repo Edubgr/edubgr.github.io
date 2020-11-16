@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             div.appendChild(h2);
         }
     }
-    var num_a=5;
+    var num_a=6;
     var num_b=5;
     var num_c=5;
     var num_d=5;
