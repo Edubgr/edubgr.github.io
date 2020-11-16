@@ -81,7 +81,20 @@ document.addEventListener('DOMContentLoaded', function() {
     next.addEventListener('click', function() {
       next_item(1,50)
     });
-    
+    console.log(screen.width,screen.height)
+
+    var hs = document.querySelectorAll(".hs")
+
+    if(2.5*screen.height<screen.width){
+        console.log(screen.width,screen.height)
+        console.log(document.getElementsByClassName("gallery")[0])
+        document.getElementsByClassName("gallery")[0].style.height="60vh";
+        for(var i=0;i<2*items.length;i+=2){
+            hs[i].className="hs h12"
+            hs[i+1].className="hs h22"
+        }
+    }
+
     var modal = document.getElementById("myModal");
     var modalImg = document.getElementById("img01");
     var captionH1 = document.getElementById("h1-caption");
