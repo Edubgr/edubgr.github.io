@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/exposit.css" media="screen" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <script type="text/javascript" src="js/create_imgs.js"></script>
+    <script type="text/javascript" src="js/exposit.js"></script>
+    
+
+    <title>Exposição CAp-COLUNI</title>
+</head>
+<body>
+    <div class="box__turma">
+        <h1 class="turma" id="A">A</h1>
+        <h1 class="turma" id="B">B</h1>
+        <h1 class="turma" id="C">C</h1>
+        <h1 class="turma" id="D">D</h1>
+    </div>
+    <div class="gallery">
+        <div class="gallery__prev"></div>
+        <div class="gallery__next"></div>
+        <div class="gallery__stream">
+        </div>
+    </div>
+    
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="img01">
+        </div>
+        <div id="caption">
+            <h1 id="h1-caption"></h1>
+            <h2 id="h2-caption"></h2>
+        </div>
+    </div>
+
+    <audio controls class="song">
+        <source src="music/1.mp3" type="audio/mp3">
+    </audio>
+</body>
+</html>

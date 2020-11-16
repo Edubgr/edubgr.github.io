@@ -7,270 +7,81 @@
   }
   
   body {
-    background-color: rgb(0, 0, 0);
-  }
-  
-  /* Gallery */
-  .box__turma{
-    color: white;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;  
-    margin: 0 auto;
-    width: 100%;
-    top: 5%;
-  }
-  .turma{
-    font-size:1.5rem;
-    padding: 2rem;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  .gallery {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    height: 90%;
-    max-height: 35vw;
-    overflow: hidden;
-  }
-  .item__name {
+    background-color: #19222e;
+    font-family: 'Caveat', cursive;
+    height: 100vh;
+    font-family: 'Architects Daughter', cursive;
+    }
+  .title {
     position: relative;
-    height: 80%;
-    color: rgb(255, 255, 255);
-    padding-top: 0.5vh;
-  }
-
-  .item__name h1 {
-    font-size: 3.1vw;
-  }
-  .item__name h2 {
-    font-size: 2.3vw;
-  }
-  .gallery:before,
-  .gallery:after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 20%;
-    height: 100%;
-    z-index: 3;
-  }
-  
-  .gallery:before {
-    left: 0;
-    background:  linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
-  }
-  
-  .gallery:after {
-    right: 0;
-    background:  linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
-  }
-  
-  .gallery__stream {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
     width: 100%;
-    height: 100%;
+    height: 25vw;
   }
-  
-  .gallery__item {
-    background-color: rgb(112, 107, 107);
+  .logo {
     position: absolute;
-    width: 50%;
-    height: 100%;
-    transition: 1s all ease;
-    text-align: center;
-    border-radius: 8px;
-    padding: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-
-  .gallery__item:hover {opacity: 0.7;}
-
-  .gallery__item:nth-child(1) {
-    left: 0;
-    z-index: 1;
-    transform: translateX(-100%) scale(.8);
-  }
-  
-  .gallery__item:nth-child(2) {
-    left: 0;
-    z-index: 2;
-    transform: translateX(-50%) scale(.8);
-  }
-  
-  .gallery__item:nth-child(3) {
-    left: 50%;
-    z-index: 4;
-    transform: translateX(-50%) scale(1);
-  }
-  
-  .gallery__item:nth-child(4) {
-    left: 100%;
-    z-index: 2;
-    transform: translateX(-50%) scale(.8);
-  }
-  
-  .gallery__item:nth-child(n+5) {
-    left: 100%;
-    z-index: 1;
-    transform: scale(.8);
-  }
-  
-  /* Controllers */
-  
-  .gallery__prev,
-  .gallery__next {
-    position: absolute;
-    top: 50%;
-    z-index: 4;
-    width: 50%;
-    height: 100%;
-    transform: translateX(-50%) translateY(-50%) scale(.8);
-    cursor: pointer;
-  }
-  
-  .gallery__prev {
-    left: 0;
-  }
-  
-  .gallery__next {
-    left: 100%;
-  }
-  
-  /* Backgrounds */
-  .bg {
-    max-width: 100%;
-    height: 80%;
-    background-size: contain;
+    background-image: url("/img/coluni.png");
     background-repeat: no-repeat;
-    background-position: center center;
-    border-radius: 8px;
+    background-position: center;
+    background-size: contain;
+    width: 25vw;
+    height: 100%;
+    left: 0; right: 0;
+    margin: auto;
+    opacity: 0.3;
   }
-  .song {
+  #h1-title {
     position: absolute;
-    top: 93%;
-    left: 3%;
-  }
-  
-  /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-  }
-  
-  /* Modal Content (Image) */
-  .modal-content {
-    margin: auto;
-    display: block;
-    width: 100%;
-    border-radius: px;
-  }
-  #img01{
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    border-radius: 15px;
-  }
-  
-  /* Caption of Modal Image (Image Text) - Same Width as the Image */
-  #caption {
-    margin: auto;
-    display: block;
-    width: 100%;
     text-align: center;
-    color: #ccc;
-    padding: 15px 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
   }
-  #caption h1{
-    font-size: 1.5rem;
+  #text {
+    position: relative;
+    box-sizing: border-box;
+    padding: 20px 80px;
+    font-size: 2rem;
+    color: rgb(190, 187, 187);
+    text-align: center;
   }
-  #caption h2{
-    font-size: 1rem;
+  #text p{
+    padding: 10px;
   }
-  /* Add Animation - Zoom in the Modal */
-  .modal-content, #caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-  }
-  
-  @keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-  }
-  
-  /* The Close Button */
-  .close {
-    position: fixed;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #bbb;
-    text-decoration: none;
+  #button{
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-color: rgb(25, 15, 78);
+    font-size: 3rem;
+    width: 250px;
+    border-radius: 12px;
     cursor: pointer;
+    transition: 0.5s;
+    padding: 12px;
   }
+  :hover#button{
+    transition: 0.5s;
+    background-color: rgb(21, 13, 58);
+  }
+  @media only screen and (max-width: 600px){
+    #h1-title {
+      font-size: 2rem;
+    }
+    #text {
+      font-size: 1.5rem;
+      padding: 10px 20px;
+    }
+    }
+  @media only screen and (max-width: 400px){
+      #h1-title {
+        font-size: 2rem;
+      }
+      #text {
+        font-size: 1.3rem;
+        padding: 10px 10px;
+      }
+      }
   
-  /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 1300px){
-    .song {
-      position: absolute;
-      top: 88%;
-      left: 0;
-      right: 0;
-      text-align: center;
-      margin: 0 auto;
-    }
-  }
-
-  @media only screen and (max-device-width: 800px) {
-    #img01{
-      width: 90%;
-      margin-left: 5%;
-      margin-right: 5%;
-    }
-    .gallery {
-      max-height: 45vw;
-    }
-    .gallery__item{
-      width: 60%;
-      padding: 8px;
-    }
-    .gallery__prev,
-    .gallery__next {
-      width: 40%;
-    }
-    .gallery__item:nth-child(1) {
-      left: -10%;
-    }
-    
-    .gallery__item:nth-child(2) {
-      left: -10%;
-    }
-    .gallery__item:nth-child(4),.gallery__item:nth-child(n+5) {
-      left: 110%;
-    }
-
-    }

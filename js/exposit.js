@@ -39,26 +39,26 @@ document.addEventListener('DOMContentLoaded', function() {
     function change_color(){
         if(items[2].className.substr(items[2].className.length-1,items[2].className.length-1)=="A"){
             A.setAttribute("style","background-color: #00a1e7")
-            B.setAttribute("style","background-color: black;")
-            C.setAttribute("style","background-color: black;")
-            D.setAttribute("style","background-color: black;")
+            B.setAttribute("style","background-color: #19222e")
+            C.setAttribute("style","background-color: #19222e")
+            D.setAttribute("style","background-color: #19222e")
     }else {
         if(items[2].className.substr(items[2].className.length-1,items[2].className.length-1)=="B"){
-            A.setAttribute("style","background-color: black;")
+            A.setAttribute("style","background-color: #19222e")
             B.setAttribute("style","background-color: #fe0000")
-            C.setAttribute("style","background-color: black;")
-            D.setAttribute("style","background-color: black;")
+            C.setAttribute("style","background-color: #19222e")
+            D.setAttribute("style","background-color: #19222e")
     }else {
         if(items[2].className.substr(items[2].className.length-1,items[2].className.length-1)=="C"){
-            A.setAttribute("style","background-color: black")
-            B.setAttribute("style","background-color: black")
+            A.setAttribute("style","background-color: #19222e")
+            B.setAttribute("style","background-color: #19222e")
             C.setAttribute("style","background-color: #fef100")
-            D.setAttribute("style","background-color: black")
+            D.setAttribute("style","background-color: #19222e")
     }else {
         if(items[2].className.substr(items[2].className.length-1,items[2].className.length-1)=="D"){
-            A.setAttribute("style","background-color: black")
-            B.setAttribute("style","background-color: black")
-            C.setAttribute("style","background-color: black")
+            A.setAttribute("style","background-color: #19222e")
+            B.setAttribute("style","background-color: #19222e")
+            C.setAttribute("style","background-color: #19222e")
             D.setAttribute("style","background-color: #f834e9")
     }}}}
     }
