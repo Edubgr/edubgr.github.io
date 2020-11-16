@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var div = document.getElementById(turma+tem);
             var h1 = document.createElement("h1");
             h1.setAttribute("class","h1 hs")
-            var text = document.createTextNode("Eduardo");
+            var text = document.createTextNode("Gustavo");
             h1.appendChild(text);
             var h2 = document.createElement("h2");
             h2.setAttribute("class","h2 hs")
@@ -36,9 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
             div.appendChild(h2);
         }
     }
-    var num_a=7;
-    var num_b=5;
-    var num_c=5;
+    var num_a=8;
+    var num_b=6;
+    var num_c=6;
     var num_d=5;
 
     create_itens("a","A",0,num_a)
