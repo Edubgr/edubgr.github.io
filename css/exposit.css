@@ -41,7 +41,7 @@
   .item__name {
     position: relative;
     height: 80%;
-    color: rgb(255, 255, 255);
+    color: #193e6e;
     padding-top: 0.5vh;
   }
 
@@ -81,7 +81,7 @@
   }
   
   .gallery__item {
-    background-color: rgb(112, 107, 107);
+    background-color: #b9b8b3;
     position: absolute;
     width: 50%;
     height: 100%;
