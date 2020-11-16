@@ -54,18 +54,20 @@
     text-align: center;
     margin: 0 auto;
     margin-bottom: 10px;
-    background-color: rgb(25, 15, 78);
+    background-color: rgb(92, 82, 143);
     font-size: 3rem;
     width: 250px;
     border-radius: 12px;
     cursor: pointer;
     transition: 0.5s;
     padding: 12px;
+    border-style: solid;
   }
   :hover#button{
     transition: 0.5s;
-    background-color: rgb(21, 13, 58);
-  }
+    color: rgb(190, 187, 187);
+    background-color: rgb(62, 54, 99);
+    }
   @media only screen and (max-width: 600px){
     #h1-title {
       font-size: 2rem;
