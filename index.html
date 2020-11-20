@@ -1,51 +1,27 @@
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt">
 <head>
-  <!DOCTYPE html>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google authentication - Exemplo 2</title>
-  <link rel="stylesheet" href="css/index.css">
-
-
-  <!-- Fonte Roboto do Google -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/index.css" media="screen" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <title>Exposição CAp-COLUNI</title>
 </head>
 <body>
-  <div class="container body-content">
-    <div class="box-login">
-      <h2>Login</h2>
-
-      <!-- Código html do botão de login -->
-      <div id="gSignInWrapper">
-        <div id="customBtn" class="customGPlusSignIn">
-          <span class="icon"></span>
-          <span class="buttonText">Logar com o Google</span>
+    <div class="title">
+        <div class="logo"></div>
+        <div id="h1-title">
+            Exposição de Arte
         </div>
-      </div>
-      <div id="name"></div>
-
-      <hr/>
-      <a href="javascript:void(0);" onclick="signOut();">Sign out</a>
+        
     </div>
-
-    <hr />
-    <footer>
-      <p>&copy; Fábrica de Código</p>
-    </footer>
-  </div>
-
-  <script src="js/index.js"></script>
-
-  <!-- Google api -->
-  <script src="https://apis.google.com/js/api:client.js"></script>
-
-  <!--JQuery e Bootstrap - Não são obrigatórios para ao autenticação -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-  <!-- função para iniciar o app -->
-  <script>startApp();</script>
+    <div id="text"> 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nesciunt consequuntur labore? Quae quisquam, hic unde nam dicta adipisci, temporibus dolorem, repudiandae minima autem totam expedita voluptates nobis similique repellendus?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam vitae non alias deleniti, nemo aliquam dolorem libero iusto, nisi veniam molestias animi in consectetur ea aut soluta? Iure, suscipit aperiam?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ducimus! Ab itaque provident harum beatae cum pariatur dolor, sunt laboriosam, quas incidunt neque, deleniti quos nisi debitis impedit unde dolore!</p>
+    </div>
+    <div onclick="window.location.href = '/exposit.html'" id="button">Começar</div>
 </body>
 </html>

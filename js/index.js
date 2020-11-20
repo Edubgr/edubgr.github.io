@@ -1,44 +1,22 @@
-var startApp = function() {
-    gapi.load('auth2', function(){
-      auth2 = gapi.auth2.init({
-        //nesse exemplo o client id também pode ser informado pela meta tag "google-signin-client_id"
-        //caso ele não seja informado aqui
-        client_id: '302556755520-jmhip5euiajlu9o1b5eg7rlk33tf2ref.apps.googleusercontent.com',
-        cookiepolicy: 'single_host_origin',
-        scope: 'profile email' // solicitando acesso ao profile e ao e-mail do usuário
-      });
-      auth2.attachClickHandler(document.getElementById('customBtn'), {}, onSuccess, onFailure);
-    });
-  };
-  
-  /**
-    Função executada quando o login é efetuado com sucesso
-  */
-  function onSuccess(googleUser) {
-      // Recuperando o profile do usuário
-      var profile = googleUser.getBasicProfile();
-      console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-      console.log("Name: " + profile.getName());
-      console.log("Image URL: " + profile.getImageUrl());
-      console.log("Email: " + profile.getEmail());
-  
-      // Recuperando o token do usuario. Essa informação você necessita passar para seu backend
-      var id_token = googleUser.getAuthResponse().id_token;
-      console.log("ID Token: " + id_token);
-  }
-  /**
-    Função executada quando ocorrer falha no logn
-  */
-  function onFailure(error) {
-      console.log(error);
-  }
-  
-  /**
-    Função de deslogar o usuario
-  */
-  function signOut() {
-      var auth2 = gapi.auth2.getAuthInstance();
-      auth2.signOut().then(function () {
-          console.log('User signed out.');
-      });
-  }
+const apiUrl = "https://login.microsoftonline.com/be87ed09-e753-468f-8244-e2f3811ceacc/oauth2/v2.0/token";
+
+const headers = {
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'SdkVersion': 'postman-graph/v1.0'
+}
+
+const body = new URLSearchParams();
+
+body.append('grant_type','password');
+body.append('client_id','682aac27-6b4b-4f13-a4f9-21f8b0f30f08');
+body.append('client_secret','.C=T8S7[XpPu0qY-HTPcUgVObr4=bHUF');
+body.append('scope',"https://graph.microsoft.com/.default");
+body.append('userName','​eduguibargmail.onmicrosoft.com')
+//body.append('password','94PgyhlUV7Te')
+
+const config = {method: 'post', mode:'no-cors', body, headers};
+
+fetch(apiUrl, config)
+    .then(res => res.json())
+    .catch(res => console.error("fudeu de vez: ",res.message))
+    .then(obt => console.log(obt));
