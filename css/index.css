@@ -1,89 +1,32 @@
-/* Global */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #19222e;
-    font-family: 'Caveat', cursive;
-    height: 100vh;
-    font-family: 'Architects Daughter', cursive;
-    }
-  .title {
-    position: relative;
-    width: 100%;
-    height: 25vw;
-  }
-  .logo {
-    position: absolute;
-    background-image: url("/img/coluni.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 25vw;
-    height: 100%;
-    left: 0; right: 0;
-    margin: auto;
-    opacity: 0.3;
-  }
-  #h1-title {
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 4rem;
-    color: rgb(255, 255, 255);
-  }
-  #text {
-    position: relative;
-    box-sizing: border-box;
-    padding: 20px 80px;
-    font-size: 2rem;
-    color: rgb(190, 187, 187);
-    text-align: center;
-  }
-  #text p{
-    padding: 10px;
-  }
-  #button{
-    position: relative;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    background-color: rgb(92, 82, 143);
-    font-size: 3rem;
-    width: 250px;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: 0.5s;
-    padding: 12px;
-    border-style: solid;
-  }
-  :hover#button{
-    transition: 0.5s;
-    color: rgb(190, 187, 187);
-    background-color: rgb(62, 54, 99);
-    }
-  @media only screen and (max-width: 600px){
-    #h1-title {
-      font-size: 2rem;
-    }
-    #text {
-      font-size: 1.5rem;
-      padding: 10px 20px;
-    }
-    }
-  @media only screen and (max-width: 400px){
-      #h1-title {
-        font-size: 2rem;
-      }
-      #text {
-        font-size: 1.3rem;
-        padding: 10px 10px;
-      }
-      }
-  
+#customBtn {
+  display: inline-block;
+  background: #4285f4;
+  color: white;
+  width: 250px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+#customBtn:hover {
+  cursor: pointer;
+}
+span.label {
+  font-weight: bold;
+}
+span.icon {
+  background: url('https://google-developers.appspot.com/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 42px;
+  height: 42px;
+  border-right: #2265d4 1px solid;
+}
+span.buttonText {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 42px;
+  padding-right: 42px;
+  font-size: 14px;
+  font-weight: bold;
+  /* Use the Roboto font that is loaded in the <head> */
+  font-family: 'Roboto', sans-serif;
+}
